@@ -10,10 +10,6 @@ math: false
 mermaid: false
 ---
 
-# UFW Gives Users a False Sense of Security
-
-## Hidden ACCEPT rules silently bypass every firewall rule you define
-
 UFW (Uncomplicated Firewall) ships on every Ubuntu and Debian-based system as the "default firewall configuration tool." Millions of administrators trust it to secure their systems. What almost none of them know is that **UFW silently injects ACCEPT rules that execute before any user-defined rules**, permanently whitelisting specific traffic regardless of what the user configures.
 
 This is not a bug. It is a deliberate design decision, undocumented in the output of any UFW command, that undermines the entire purpose of running a firewall.

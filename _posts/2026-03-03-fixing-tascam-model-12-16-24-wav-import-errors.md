@@ -14,6 +14,7 @@ If importing a 24-bit WAV file into a Tascam Model 12, Model 16, or Model 24 has
 
 ## Table of Contents
 
+- [TL;DR](#tldr)
 - [Symptoms](#symptoms)
 - [Root Cause](#root-cause)
 - [Why Your Tools Produce This Header](#why-your-tools-produce-this-header)
@@ -23,6 +24,9 @@ If importing a 24-bit WAV file into a Tascam Model 12, Model 16, or Model 24 has
 - [Import Workflow](#import-workflow)
 - [Other Affected Hardware](#other-affected-hardware)
 
+## TL;DR 
+
+Tascam Model 12/16/24 mixers reject 24-bit WAV files produced by ffmpeg and SoX.  The audio data is fine.  Use [wav2tascam](https://github.com/ultra70/media/wav2tascam) to rewrite the header, or use SoX with -t wavpcm.  16-bit WAV files are not affected.
 
 ## Symptoms
 

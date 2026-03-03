@@ -4,4 +4,4 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-Check out my repo [ultra70.github.com](https://ultra70.github.com)
+Check out my repo [github.com/ultra70](https://github.com/ultra70)

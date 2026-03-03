@@ -10,7 +10,7 @@ math: false
 mermaid: false
 ---
 
-If you have tried to import a 24-bit WAV file into a Tascam Model 12, Model 16, or Model 24 and received "File Error" with no further explanation, the problem could be in the WAV header, not the audio data.
+If importing a 24-bit WAV file into a Tascam Model 12, Model 16, or Model 24 has resulted in "File Error" with no further explanation, the problem could be in the WAV header, not the audio data.
 
 ## Table of Contents
 

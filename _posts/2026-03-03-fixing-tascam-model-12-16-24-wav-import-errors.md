@@ -72,7 +72,7 @@ This works, but it requires SoX to be installed and the user to know about the `
 
 ## The Fix: wav2tascam.py
 
-I wrote [wav2tascam](https://github.com/ultra70/media/wav2tascam), a Python script that reads a WAV file, extracts the raw PCM data, and writes a new WAV file with a standard 16-byte `fmt` chunk and format tag 0x0001.  Sample rate, bit depth, channel layout and audio data are preserved from the source file.  It handles both WAVE\_FORMAT\_PCM and WAVE\_FORMAT\_EXTENSIBLE input, so running it on a file that already has the correct header produces an identical output.
+[wav2tascam](https://github.com/ultra70/media/wav2tascam), reads a WAV file, extracts the raw PCM data, and writes a new WAV file with a standard 16-byte `fmt` chunk and format tag 0x0001.  Sample rate, bit depth, channel layout and audio data are preserved from the source file.  It handles both WAVE\_FORMAT\_PCM and WAVE\_FORMAT\_EXTENSIBLE input, so running it on a file that already has the correct header produces an identical output.
 
 ```bash
 ./wav2tascam.py input.wav output.wav

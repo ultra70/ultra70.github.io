@@ -26,7 +26,7 @@ If importing a 24-bit WAV file into a Tascam Model 12, Model 16, or Model 24 has
 
 ## TL;DR 
 
-Tascam Model 12/16/24 mixers reject 24-bit WAV files produced by ffmpeg and SoX.  The audio data is fine.  Use [wav2tascam](https://github.com/ultra70/media/wav2tascam) to rewrite the header, or use SoX with -t wavpcm.  16-bit WAV files are not affected.
+Tascam Model 12/16/24 mixers reject 24-bit WAV files produced by ffmpeg and SoX.  The audio data is fine.  Use [wav2tascam](https://github.com/ultra70/media/tree/main/wav2tascam) to rewrite the header, or use SoX with -t wavpcm.  16-bit WAV files are not affected.
 
 ## Symptoms
 
@@ -76,7 +76,7 @@ This works, but it requires SoX to be installed and the user to know about the `
 
 ## The Fix: wav2tascam.py
 
-[wav2tascam](https://github.com/ultra70/media/wav2tascam), reads a WAV file, extracts the raw PCM data, and writes a new WAV file with a standard 16-byte `fmt` chunk and format tag 0x0001.  Sample rate, bit depth, channel layout and audio data are preserved from the source file.  It handles both WAVE\_FORMAT\_PCM and WAVE\_FORMAT\_EXTENSIBLE input, so running it on a file that already has the correct header produces an identical output.
+[wav2tascam](https://github.com/ultra70/media/tree/main/wav2tascam), reads a WAV file, extracts the raw PCM data, and writes a new WAV file with a standard 16-byte `fmt` chunk and format tag 0x0001.  Sample rate, bit depth, channel layout and audio data are preserved from the source file.  It handles both WAVE\_FORMAT\_PCM and WAVE\_FORMAT\_EXTENSIBLE input, so running it on a file that already has the correct header produces an identical output.
 
 ```bash
 ./wav2tascam.py input.wav output.wav

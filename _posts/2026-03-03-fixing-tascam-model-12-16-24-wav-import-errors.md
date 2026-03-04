@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Fixing Tascam Model 12 / 16 / 24 WAV Import Errors"
-description: "If importing a 24-bit WAV file into a Tascam Model 12, Model 16, or Model 24 has resulted in "File Error" with no further explanation, the problem could be in the WAV header, not the audio data"
+description: "If importing a 24-bit WAV file into a Tascam Model 12, Model 16, or Model 24 has resulted in \"File Error\" with no further explanation, the problem could be in the WAV header, not the audio data"
 date: 2026-03-03
 categories: [audio, linux]
 tags: [tascam, wav, ffmpeg, sox, model-12, model-16, model-24, pioneer, akai, roland]

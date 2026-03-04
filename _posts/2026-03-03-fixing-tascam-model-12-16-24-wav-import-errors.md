@@ -1,20 +1,21 @@
 ---
 layout: post
 title: "Fixing Tascam Model 12 / 16 / 24 WAV Import Errors"
+description: "If importing a 24-bit WAV file into a Tascam Model 12, Model 16, or Model 24 has resulted in "File Error" with no further explanation, the problem could be in the WAV header, not the audio data"
 date: 2026-03-03
 categories: [audio, linux]
 tags: [tascam, wav, ffmpeg, sox, model-12, model-16, model-24, pioneer, akai, roland]
+description:
 pin: false
 toc: true
 math: false
 mermaid: false
 ---
 
-If importing a 24-bit WAV file into a Tascam Model 12, Model 16, or Model 24 has resulted in "File Error" with no further explanation, the problem could be in the WAV header, not the audio data.
+Tascam Model 12/16/24 mixers reject 24-bit WAV files produced by ffmpeg and SoX.  The audio data is fine.  Use [wav2tascam](https://github.com/ultra70/media/tree/main/wav2tascam) to rewrite the header, or use SoX with -t wavpcm.  16-bit WAV files are not affected.
 
 ## Table of Contents
 
-- [TL;DR](#tldr)
 - [Symptoms](#symptoms)
 - [Root Cause](#root-cause)
 - [Why Your Tools Produce This Header](#why-your-tools-produce-this-header)
@@ -23,10 +24,6 @@ If importing a 24-bit WAV file into a Tascam Model 12, Model 16, or Model 24 has
 - [The Fix: wav2tascam.py](#the-fix-wav2tascampy)
 - [Import Workflow](#import-workflow)
 - [Other Affected Hardware](#other-affected-hardware)
-
-## TL;DR 
-
-Tascam Model 12/16/24 mixers reject 24-bit WAV files produced by ffmpeg and SoX.  The audio data is fine.  Use [wav2tascam](https://github.com/ultra70/media/tree/main/wav2tascam) to rewrite the header, or use SoX with -t wavpcm.  16-bit WAV files are not affected.
 
 ## Symptoms
 

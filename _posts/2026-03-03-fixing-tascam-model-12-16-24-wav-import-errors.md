@@ -6,7 +6,6 @@ description: >
 date: 2026-03-03
 categories: [audio, linux]
 tags: [tascam, wav, ffmpeg, sox, model-12, model-16, model-24, pioneer, akai, roland]
-description:
 pin: false
 toc: true
 math: false
